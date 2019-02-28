@@ -116,3 +116,76 @@ while True:
     else:
         print("잘못된 입력입니다.")
         pass
+
+# 성적표 출력 함수를 사용하여 프로그램 제작
+# 5점에 한단계식 낮아짐
+# 95점 이상 A+, 90 이상 A, ...
+# 60점 미만은 F
+
+# score = input("성적을 입력하세요 : ")
+# score = int(score)
+
+# if score >= 95:
+#     print("성적은 {0}이며, ".format(score))
+#     print("등급은 {0}입니다.".format("A+"))
+# elif score >= 90:
+#     print("성적은 {0}이며, ".format(score))
+#     print("등급은 {0}입니다.".format("A"))
+# elif score >= 85:
+#     print("성적은 {0}이며, ".format(score))
+#     print("등급은 {0}입니다.".format("B+"))
+# elif score >= 80:
+#     print("성적은 {0}이며, ".format(score))
+#     print("등급은 {0}입니다.".format("B"))
+# elif score >= 75:
+#     print("성적은 {0}이며, ".format(score))
+#     print("등급은 {0}입니다.".format("C+"))
+# elif score >= 70:
+#     print("성적은 {0}이며, ".format(score))
+#     print("등급은 {0}입니다.".format("C"))
+# elif score >= 60:
+#     print("성적은 {0}이며, ".format(score))
+#     print("등급은 {0}입니다.".format("D"))
+# else:
+#     print("성적은 {0}이며, ".format(score))
+#     print("등급은 {0}입니다.".format("F"))
+
+print()
+
+def scorePrint(score, level):
+    print("성적은 {0}이며, ".format(score))
+    print("등급은 {0}입니다.".format(level))
+
+def selectLevel(score):
+    if score >= 95:
+        scorePrint(score, "A+")
+    elif score >= 90:
+        scorePrint(score, "A")
+    elif score >= 85:
+        scorePrint(score, "B+")
+    elif score >= 80:
+        scorePrint(score, "B")
+    elif score >= 75:
+        scorePrint(score, "C+")
+    elif score >= 70:
+        scorePrint(score, "C")
+    elif score >= 60:
+        scorePrint(score, "D")
+    else:
+        scorePrint(score, "F")
+
+def inputScore():
+    score = input("당신의 점수를 입력하세요 : ")
+    score = int(score)
+
+    return score
+
+
+selectLevel(inputScore())
+
+# selectLevel(score)
+
+# score = input("당신의 점수를 입력하세요 : ")
+# score = int(score)
+
+# selectLevel(score)
